@@ -12,11 +12,8 @@ pipeline {
             }
         }
         stage ("Deploy") {
-            agent {
-                docker { image 'tomcat:8.0.20-jre8'}
-            }
             steps {
-                echo "Tomcat image"
+                docker build -t image .
             }
         }
     }
