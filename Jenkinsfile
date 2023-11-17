@@ -13,6 +13,7 @@ pipeline {
             }
         }
         stage ("Deploy") {
+            agent none
             steps {
                 sh "docker --version"
             }
