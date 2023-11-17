@@ -9,11 +9,7 @@ pipeline {
             steps {
                 git branch: "master", url: "https://github.com/venkatreddybandi1999/CICD-Agent.git"
                 sh "mvn clean install"
-            }
-        }
-        stage ("Deploy") {
-            steps {
-                docker build -t image .
+                docker build -t .
             }
         }
     }
