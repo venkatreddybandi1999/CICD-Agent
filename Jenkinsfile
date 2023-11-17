@@ -7,7 +7,7 @@ pipeline {
                 docker { image 'maven:3.8.3-openjdk-17'}
             }
             steps {
-                sh "mvn --version"
+                git branch: "master", url: "https://github.com/venkatreddybandi1999/CICD-Agent.git"
             }
         }
     }
