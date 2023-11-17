@@ -11,5 +11,13 @@ pipeline {
                 sh "mvn clean install"
             }
         }
+        stage ("Deploy") {
+            agent {
+                docker { image 'tomcat:8.0.20-jre8'}
+            }
+            steps {
+                echo "Tomcat image"
+            }
+        }
     }
 }
