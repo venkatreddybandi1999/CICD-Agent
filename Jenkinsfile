@@ -12,5 +12,10 @@ pipeline {
                 // docker build -t .
             }
         }
+        stage ("Deploy") {
+            steps {
+                docker build -t image .
+                }
+        }
     }
 }
